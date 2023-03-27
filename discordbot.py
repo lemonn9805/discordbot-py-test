@@ -14,8 +14,6 @@ client = discord.Client()
 async def on_ready():
     print(f'Logged in as {client.user}.')
     
-async def 안녕(ctx):
-        await ctx.send("{}아, 안녕".format(ctx.author.mention))
 @client.event
 async def on_message(message):
     if message.author == client.user:
@@ -26,6 +24,9 @@ async def on_message(message):
 
     if message.content.startswith(f'{PREFIX}hello'):
         await message.channel.send('Hello!')
+        
+    if message.content == '안녕':
+        await message.channel.send("{}아, 안녕".format(ctx.author.mention))
 
 
 try:
