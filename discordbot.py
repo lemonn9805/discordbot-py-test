@@ -26,7 +26,7 @@ async def on_message(message):
         await message.channel.send('Hello!')
         
     if message.content.startswith(''):
-        await message.channel.send("+play {}".format(message))
+        await message.channel.send("+play {}".format(message.content))
 
 
 try:
