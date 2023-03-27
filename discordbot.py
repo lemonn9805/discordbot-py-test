@@ -26,7 +26,7 @@ async def on_message(message):
         await message.channel.send('Hello!')
         
     if message.content == '안녕':
-        await message.channel.send("{}아, 안녕".format(ctx.author.mention))
+        await message.channel.send("{}아, 안녕".format(message.author.mention))
 
 
 try:
