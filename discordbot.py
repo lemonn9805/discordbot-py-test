@@ -25,7 +25,7 @@ async def on_message(message):
     if message.content.startswith(f'{PREFIX}hello'):
         await message.channel.send('Hello!')
         
-    if message.content == '안녕':
+    if message.content.startswith(''):
         await message.channel.send("{}아, 안녕".format(message.author.mention))
 
 
